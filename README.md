@@ -1,6 +1,6 @@
 #1: Go to the myNLP2hpogenes_pipeline directory.
 
-#2: Create a folder named "clinicalnotes" in this directory with all the clinical notes.
+#2: Replace test notes in the "clinicalnotes" folder with the desired clinical notes to analyze.
 
 #3: Run the meta shell script 'runanalysis.sh'.
 
