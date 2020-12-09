@@ -23,7 +23,7 @@ def hpo2gene_parser(output_path):
 
     with open(output_path, "wt") as path:
         for key, value in hpo2gene_records_dict.items():
-            path.write("{}\t{}\n".format(key, value))
+            path.write("{}\t{}\n".format(key, list(dict.fromkeys(value))))
     path.close()
 
 
