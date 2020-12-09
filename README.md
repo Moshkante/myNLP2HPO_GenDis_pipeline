@@ -2,9 +2,7 @@
 
 #2: Replace test notes in the "clinicalnotes" folder with the desired clinical notes to analyze.
 
-#3: Run the meta shell script 'runanalysis.sh'.
-
-#4: Internet connection is required!
+#3: Run the meta shell script 'runanalysis.sh'. The pipeline requires a stable internet connection!
 
 
 Definition of folders created while running the shell script:
