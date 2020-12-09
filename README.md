@@ -4,6 +4,8 @@
 
 #3: Run the meta shell script 'runanalysis.sh'.
 
+#4: Internet connection is required!
+
 
 Definition of folders created while running the shell script:
 
