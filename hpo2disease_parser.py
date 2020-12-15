@@ -16,7 +16,7 @@ def hpo2disease_parser(output_path):
         line_elements = decoded_line.rstrip().split('\t')
         tag = line_elements[3]
         value = line_elements[1]
-        current_diseases.append([tag.strip("''"), value])
+        current_diseases.append([tag.strip("''"), value.lower().replace(",", "").replace(";", "")])
 
     for key, *value in current_diseases:
         hpo2disease_records_dict.setdefault(key, []).extend(value)
