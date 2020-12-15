@@ -23,7 +23,7 @@ def annotate_genes(input_path, out_path):
     """Main function:
     Args:
         input_path (str): Local path to the folder with HPO annotated clinical notes.
-        out_path (str): Local path to folder where prioritized genes for each clinical note should be stored.
+        out_path (str): Local path to folder where extracted genes for each clinical note should be stored.
     """
     notes = os.listdir(input_path)
     for lists in notes:
