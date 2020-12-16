@@ -1,5 +1,5 @@
 ## Getting started
-* Go to the myNLP2hpogenes_pipeline directory.
+* Go to the myNLP2HPO_GenDis_pipeline directory.
 
 * Replace test notes in the *clinicalnotes* folder with the desired clinical notes to analyze.
 
