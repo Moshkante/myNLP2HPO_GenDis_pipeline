@@ -98,7 +98,7 @@ def myNLP2hpo(input_path, output_path, negation=False):
     clin_notes = os.listdir(input_path)
     for clin in clin_notes:
         if clin.endswith('.txt'):
-            with open(input_path + "/" + clin) as file:
+            with open(input_path + "/" + clin, encoding="UTF-8") as file:
                 note = str.replace(file.read(), "\n", "")
         else:
             print("There is no text file in the given directory.")
