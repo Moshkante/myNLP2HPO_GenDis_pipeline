@@ -1,0 +1,21 @@
+A 60-year-old gentleman with a past medical history of heart failure with reduced ejection fraction (HFrEF), epilepsy, and schizophrenia presented to our facility complaining of dry cough and generalized weakness for few days duration. 
+He is an active smoker and has a remote history of cocaine and heroin use, which he has quit 22 years ago. 
+His medications included metoprolol succinate, lisinopril, levetiracetam, and risperidone. 
+He has no prior history of atrial fibrillation, hypertension, myocardial infarction, or thrombosis. 
+Initial vital signs showed a temperature 37.1 C, heart rate 92/min, respiratory rate of 23/min, and oxygen saturation 97% on room air. 
+Physical exam revealed decreased air entry to the lungs bilaterally with diffuse rhonchi. 
+He also had +1 bilateral lower limb pitting edema. 
+Laboratory studies revealed a normal complete blood count and complete metabolic panel. 
+N-terminal (NT)-pro hormone BNP was mildly elevated of 517 pg/mL (0–100 pg/mL). 
+Inflammatory markers were markedly elevated with D-Dimer 64,000 ng/mL (0–500 ng/ml), Ferritin 729.1 ng/ mL (24–336 ng/mL), C-reactive protein 14.4 mg/dL (0.0–0.8 mg/dL), and lactate dehydrogenase 669 U/L (122–222 U/L). 
+Troponins were negative. 
+SARS-CoV-2 real-time polymerase chain reaction (RT-PCR) was positive from a nasopharyngeal swab. 
+The electrocardiograph (ECG) showed a sinus tachycardia with signs of left ventricular hypertrophy. 
+Multifocal opacities were appreciated in the chest X-ray (Figure 1). 
+Computed tomography (CT) angiogram of the chest revealed right upper lobe segmental and subsegmental emboli, suggestions of multiple thrombi in the left ventricle, and multifocal ground-glass opacities (Figure 2). 
+Echocardiogram was done for further evaluation which revealed a large thrombus of a diameter of 3 × 3 cm in the apical region of the left ventricle, and an ejection fraction of 20%–25% with signs of left ventricular hypertrophy (Figure 3), normal right ventricular systolic function with no signs of right heart strain, and no evidence of any thrombus in the right heart chambers or any valvular heart disease. 
+Three months before his presentation, the patient had a two-dimensional (2D) echocardiograph with no evidence of thrombus in the left ventricle, with the same ejection fractions and the signs of left ventricular hypertrophy (Figure 4). 
+He was started on a therapeutic dose of enoxaparin (1 mg/kg) twice daily for 7 days for the pulmonary emboli and the left ventricle thrombus, before transition to apixaban. 
+At the same time, he was also started on guideline-directed medical therapy for the heart failure. 
+
+Source: https://journals.sagepub.com/doi/full/10.1177/2050313X20974534
