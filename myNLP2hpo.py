@@ -156,24 +156,9 @@ def myNLP2hpo(input_path, output_path, negation=False):
         # and we have: notes tokens
         # all HP id, name and synonyms can be retrieved from the library
 
-        # check if keywords, synonyms are in the clinical note by looking for exact match by token
-        HP_keywords = set(stemmed_singlekw_low) & set(stemmed_tokens)
-        HP_synonyms = set(stemmed_singlesyn_low) & set(stemmed_tokens)
-
         # check if longer keywords, synonyms are in the clinical notes by matching substring
         HP_keywords_list = []
         HP_synonyms_list = []
-        # saving the keywords in the notes
-        for kw in multiplekw_low:
-            if kw in note.lower():
-                HP_keywords_list.append(kw)
-
-        for kw in stemmed_multiplekw_low:
-            if kw in HP_keywords_list:
-                continue
-            else:
-                if kw in note.lower():
-                    HP_keywords_list.append(kw)
 
         # saving the synonyms in the notes
         for syn in stemmed_multiplesyn_low:
@@ -201,9 +186,27 @@ def myNLP2hpo(input_path, output_path, negation=False):
                 if syn in note.lower():
                     HP_synonyms_list.append(syn)
 
+        # saving the longer keywords in the notes
+        for kw in multiplekw_low:
+            if kw in note.lower():
+                HP_keywords_list.append(kw)
+
+        for kw in stemmed_multiplekw_low:
+            if kw in HP_keywords_list:
+                continue
+            else:
+                if kw in note.lower():
+                    HP_keywords_list.append(kw)
+
+        # check if single keywords and synonyms are in the clinical note by looking for exact match by token
+        HP_keywords = set(stemmed_singlekw_low) & set(stemmed_tokens)
+        HP_synonyms = set(stemmed_singlesyn_low) & set(stemmed_tokens)
+
+        # Gather all information together in a list
         HP_keywords_list += list(HP_keywords)
         HP_synonyms_list += list(HP_synonyms)
 
+        # Collect HP_id information for every matched synonym and term
         patient_kw = []
         patient_syn = []
         for u in HP_keywords_list:
@@ -240,7 +243,6 @@ def myNLP2hpo(input_path, output_path, negation=False):
                                 print("The HPO synonym %s could not be found in the clinical notes." % g)
 
         # now we have the patient variable filled with HPO keywords or synonyms that fit to HPO terms in the library
-
         patient_HPO = []
         for row in patient_kw:
             # exclude library header
