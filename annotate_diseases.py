@@ -15,7 +15,7 @@ with open(output_path) as HPO2diseases:
     disease_library = []
     for line in HPO2diseases:
         tsplit = line.split("\t")
-        disease_library.append([tsplit[0], str.replace(tsplit[1], "\n", "").strip("[]")])
+        disease_library.append([tsplit[0], str.replace(tsplit[1], "\n", "")])
 HPO2diseases.close()
 
 
@@ -29,7 +29,7 @@ def annotate_diseases(input_path, out_path):
     for lists in notes:
         if lists.endswith(".HPO.txt"):
             with open(input_path + "/" + lists) as file:
-                patient = str.replace(file.read(), "\n", " ")
+                patient = str.replace(file.read(), "\n", " ").replace("\t", " ")
         file.close()
 
         patient_diseases = []
