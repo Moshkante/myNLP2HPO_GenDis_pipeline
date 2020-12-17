@@ -33,7 +33,7 @@ def annotate_diseases(input_path, out_path):
         file.close()
 
         patient_diseases = []
-        for term in disease_library:
+        for term in disease_library[1:]:
             if term[0] in patient:
                 patient_diseases.append([term[0]+"\t", term[1].strip("[]").replace("'", "")])
 
