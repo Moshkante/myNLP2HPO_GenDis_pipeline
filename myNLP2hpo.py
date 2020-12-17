@@ -274,6 +274,7 @@ def myNLP2hpo(input_path, output_path, negation=False):
         rx = re.compile(r'(?<=\d)(?=[^\d\s])')
 
         with open(output_path + "/" + clin.replace(".txt", ".HPO.txt"), "w") as out:
+            out.write("patient_HPO_id\tid_name\n")
             for item in patient_HPO_final:
                 item = str().join(item)
                 it = rx.sub('\t', item)
