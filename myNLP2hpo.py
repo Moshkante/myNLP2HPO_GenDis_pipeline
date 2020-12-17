@@ -31,7 +31,7 @@ with open(output) as HPO:
     library = []
     for line in HPO:
         tsplit = line.split("\t")
-        library.append([tsplit[0], tsplit[1], tsplit[12]])
+        library.append([tsplit[0], tsplit[1], tsplit[9]])
 HPO.close()
 
 # extract HPO term names to keywords
