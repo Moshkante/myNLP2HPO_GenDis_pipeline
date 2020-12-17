@@ -33,7 +33,7 @@ def annotate_genes(input_path, out_path):
         file.close()
 
         patient_genes = []
-        for term in gene_library:
+        for term in gene_library[1:]:
             if term[0] in patient:
                 patient_genes.append([term[0]+"\t", term[1].strip("[]").replace("'", "")])
 
