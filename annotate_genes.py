@@ -47,6 +47,7 @@ def annotate_genes(input_path, out_path):
             os.mkdir(sourcedir + "/" + out_path)
 
         with open(out_path + "/" + lists.replace(".HPO.txt", ".genes.txt"), "w") as out:
+            out.write("patient_HPO_id\tassociated_genes\n")
             for item in patient_genes:
                 item = str().join(item)
                 out.write("%s\n\n" % item)
