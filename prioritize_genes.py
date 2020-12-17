@@ -19,7 +19,7 @@ def prioritize_genes(input_path, output_path):
 
         genes_only = re.sub(r"(HP:).{7}", "", patient_genes).replace("\n\n", "")
         genes = re.findall(r"\w+-\w+|[\w']+", genes_only)
-        gene_frequency = Counter(genes).most_common()
+        gene_frequency = Counter(genes[2:]).most_common()
 
         rank = 1
         ranked_genes = []
