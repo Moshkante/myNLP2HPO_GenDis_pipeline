@@ -137,7 +137,13 @@ def parse_obo_format(lines):
                     value = " ".join(value.split("\n"))
                     current_record[tag].append(value)
                 else:
-                    current_record[tag] = value
+                    if tag == "alt_id":
+                        value = " ".join(value.split("\n"))
+                        current_record[tag].append(value)
+                    else:
+                        if tag == "is_a":
+                            value = " ".join(value.split("\n"))
+                            current_record[tag].append(value)
 
     # add a 'children' key and list of child ids to all records that have children
     _compute_children_column(obo_records_dict)
@@ -238,16 +244,18 @@ def _compute_children_column(obo_records_dict):
             continue
 
         parent_id = current_record["is_a"]
-        if parent_id not in obo_records_dict:
-            logger.warning("%s has a parent id %s which is not in the ontology" % (
-                term_id, parent_id))
-            continue
+        for parent in parent_id:
+            if parent not in obo_records_dict:
+                logger.warning("%s has a parent id %s which is not in the ontology" % (
+                    term_id, parent))
+                continue
 
-        parent_record = obo_records_dict[parent_id]
-        if 'children' not in parent_record:
-            parent_record['children'] = []
+        for parent in parent_id:
+            parent_record = obo_records_dict[parent]
+            if 'children' not in parent_record:
+                parent_record['children'] = []
 
-        parent_record['children'].append(term_id)
+            parent_record['children'].append(term_id)
 
 
 def compute_category_column(
