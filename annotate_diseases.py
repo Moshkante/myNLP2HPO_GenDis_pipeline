@@ -47,7 +47,7 @@ def annotate_diseases(input_path, out_path):
             os.mkdir(sourcedir + "/" + out_path)
 
         with open(out_path + "/" + lists.replace(".HPO.txt", ".diseases.txt"), "w") as out:
-            out.write("patient_HPO_Id\tAnnotated_Diseases\n")
+            out.write("Patient_HPO_Id\tAnnotated_Diseases\n")
             for item in patient_diseases:
                 item = str().join(item)
                 out.write("%s\n\n" % item)
