@@ -1,6 +1,7 @@
 import urllib
 import urllib.request
 import argparse
+import string
 
 
 def hpo2disease_parser(output_path):
@@ -16,13 +17,13 @@ def hpo2disease_parser(output_path):
         line_elements = decoded_line.rstrip().split('\t')
         tag = line_elements[3]
         value = line_elements[1]
-        current_diseases.append([tag.strip("''"), value.lower().replace(",", "").replace(";", "")])
+        current_diseases.append([tag.strip("''"), string.capwords(value.replace(",", "").replace(";", ""))])
 
     for key, *value in current_diseases:
         hpo2disease_records_dict.setdefault(key, []).extend(value)
 
     with open(output_path, "wt") as path:
-        path.write("HPO_id\tAnnotated_diseases\n")
+        path.write("HPO_Id\tAnnotated_Diseases\n")
         for key, value in hpo2disease_records_dict.items():
             path.write("{}\t{}\n".format(key, list(dict.fromkeys(value))).replace("'", "").replace("[", "").replace("]", ""))
     path.close()
