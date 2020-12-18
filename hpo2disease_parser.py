@@ -22,9 +22,12 @@ def hpo2disease_parser(output_path):
     for key, *value in current_diseases:
         hpo2disease_records_dict.setdefault(key, []).extend(value)
 
+    sorted_records_dict = {k: v for k, v in sorted(hpo2disease_records_dict.items(), key=lambda item: item[0])}
+
+        
     with open(output_path, "wt") as path:
         path.write("HPO_Id\tAnnotated_Diseases\n")
-        for key, value in hpo2disease_records_dict.items():
+        for key, value in sorted_records_dict.items():
             path.write("{}\t{}\n".format(key, list(dict.fromkeys(value))).replace("'", "").replace("[", "").replace("]", ""))
     path.close()
 
