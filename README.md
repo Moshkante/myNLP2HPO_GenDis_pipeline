@@ -6,7 +6,7 @@
 * Run the meta shell script `runanalysis.sh`. The pipeline requires a stable internet connection!
 
 
-## Definition of folders created while running the shell script:
+## Definition of folders created while running the shell script
 
 * `/sources`: contains three .tsv files, *HPO_Terms.tsv* with all HPO terms including synonyms and parent ids, *HPO2Genes.tsv* with genes linked to each HPO term and *HPO2Diseases.tsv* with diseases linked to each HPO term.
 * `/out_extracted_HPO`: contains extracted HPO terms for each clinical note in the *clinicalnotes* folder as .txt files.
