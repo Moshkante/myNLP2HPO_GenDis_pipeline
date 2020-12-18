@@ -8,7 +8,7 @@ if os.path.isdir(sourcedir + "/" + "sources") is False:
     os.mkdir(sourcedir + "/" + "sources")
 
 # Create HPO2gene annotation file
-output_path = "./sources/hpo2genes.tsv"
+output_path = "./sources/HPO2Genes.tsv"
 hpo2gene_parser.hpo2gene_parser(output_path)
 
 with open(output_path) as HPO2genes:
@@ -47,7 +47,7 @@ def annotate_genes(input_path, out_path):
             os.mkdir(sourcedir + "/" + out_path)
 
         with open(out_path + "/" + lists.replace(".HPO.txt", ".genes.txt"), "w") as out:
-            out.write("patient_HPO_id\tassociated_genes\n")
+            out.write("patient_HPO_Id\tAnnotated_Genes\n")
             for item in patient_genes:
                 item = str().join(item)
                 out.write("%s\n\n" % item)
