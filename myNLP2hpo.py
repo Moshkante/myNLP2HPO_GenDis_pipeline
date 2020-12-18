@@ -22,7 +22,7 @@ sourcedir = os.getcwd()
 if os.path.isdir(sourcedir + "/" + "sources") is False:
     os.mkdir(sourcedir + "/" + "sources")
 
-output = "./sources/HPO_terms.tsv"
+output = "./sources/HPO_Terms.tsv"
 phenotypic_abnormalities = "HP:0000118"
 children_category = True
 obo_parser.convert_obo_to_tsv(hpo_url, output, phenotypic_abnormalities, children_category)
