@@ -22,7 +22,7 @@ def hpo2gene_parser(output_path):
         hpo2gene_records_dict.setdefault(key, []).extend(value)
 
     with open(output_path, "wt") as path:
-        path.write("HPO_id\tAnnotated_genes\n")
+        path.write("HPO_Id\tAnnotated_Genes\n")
         for key, value in hpo2gene_records_dict.items():
             path.write("{}\t{}\n".format(key, list(dict.fromkeys(value))).replace("'", "").replace("[", "").replace("]", ""))
     path.close()
