@@ -22,7 +22,7 @@ sourcedir = os.getcwd()
 if os.path.isdir(sourcedir + "/" + "sources") is False:
     os.mkdir(sourcedir + "/" + "sources")
 
-output = "./sources/HPO.tsv"
+output = "./sources/HPO_terms.tsv"
 phenotypic_abnormalities = "HP:0000118"
 children_category = True
 obo_parser.convert_obo_to_tsv(hpo_url, output, phenotypic_abnormalities, children_category)
@@ -274,7 +274,7 @@ def myNLP2hpo(input_path, output_path, negation=False):
         rx = re.compile(r'(?<=\d)(?=[^\d\s])')
 
         with open(output_path + "/" + clin.replace(".txt", ".HPO.txt"), "w") as out:
-            out.write("patient_HPO_id\tid_name\n")
+            out.write("patient_HPO_Id\tId_Name\n")
             for item in patient_HPO_final:
                 item = str().join(item)
                 it = rx.sub('\t', item)
