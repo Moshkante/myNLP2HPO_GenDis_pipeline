@@ -5,6 +5,7 @@
 
 * Run the meta shell script `runanalysis.sh`. The pipeline requires a stable internet connection!
 
+* Version two can be tested with the meta shell script `runanalysis_v2.sh`, which also requires internet connection. The folders created with the second version have the prefix "v2_".
 
 ## Definition of folders created while running the shell script
 
